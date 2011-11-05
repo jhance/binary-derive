@@ -11,8 +11,8 @@ Build-Type: Simple
 Cabal-Version: >= 1.8
 Category: Data
 Synopsis: Automatic deriving of Binary using GHC.Generics
-Description: This package provides deriveGet and derivePut, respectively, which
-    each can be used to quickly create an instance of Binary for any time which
+Description: This package provides deriveGet and derivePut which
+    can be used to quickly create an instance of Binary for any time which
     implements Generic. Naturally, this can be used with -XDeriveGeneric to not     have to write any boilerplate code. This differs from binary-generic which
     relies on the Data class instead and doesn't seem to have quite the same
     implementation philosophy. Once Ghc 7.2 is stable, this could be combined
