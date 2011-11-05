@@ -1,3 +1,5 @@
+-- Copyright 2011 Jared Hance
+
 {-# LANGUAGE FlexibleContexts, TypeOperators #-}
 module Data.Binary.Derive
     (

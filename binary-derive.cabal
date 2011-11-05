@@ -4,10 +4,12 @@
 Name: binary-derive
 Version: 0.1
 License: GPL-3
+License-File: COPYING
 Author: Jared Hance
 Maintainer: Jared Hance <jaredhance@gmail.com>
 Build-Type: Simple
 Cabal-Version: >= 1.8
+Category: Data
 Synopsis: Automatic deriving of Binary using GHC.Generics
 Description: This package provides deriveGet and derivePut, respectively, which
     each can be used to quickly create an instance of Binary for any time which
@@ -17,7 +19,14 @@ Description: This package provides deriveGet and derivePut, respectively, which
     into the binary package to provide a sensible default for the Binary class.
 
 Library
-    Build-Depends: base, binary, ghc-prim
+    Build-Depends: base < 4.5,
+                   binary < 0.7,
+                   ghc-prim < 0.3
     Ghc-Prof-Options: -prof -auto-all -caf-all -rtsopts
     Exposed-Modules: Data.Binary.Derive
     Exposed: True
+
+Source-Repository head
+    Type: git
+    Location: https://github.com/jhance/binary-derive
+
