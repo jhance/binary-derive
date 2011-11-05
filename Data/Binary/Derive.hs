@@ -20,9 +20,14 @@ instance Binary ConsChoice where
                 True -> return L
                 False -> return R
 
+-- | Derives a `put` function for an instance of Binary. Normally you won't
+-- call this from anywhere except that `put` function in your instance
+-- declaration.
 derivePut :: (Generic t, GBinary (Rep t)) => t -> Put
 derivePut = gput . from
 
+-- | Derives a `get` value for an instance of Binary. Normally you won't use
+-- this from anywhere except that `get` value in your instance declaration.
 deriveGet :: (Generic t, GBinary (Rep t)) => Get t
 deriveGet = gget >>= return . to
 
