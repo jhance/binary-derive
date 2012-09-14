@@ -19,7 +19,7 @@ Description: This package provides deriveGet and derivePut which
     into the binary package to provide a sensible default for the Binary class.
 
 Library
-    Build-Depends: base < 4.5,
+    Build-Depends: base < 4.6,
                    binary < 0.7,
                    ghc-prim < 0.3
     Ghc-Prof-Options: -prof -auto-all -caf-all -rtsopts
