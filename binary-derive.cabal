@@ -19,9 +19,9 @@ Description: This package provides deriveGet and derivePut which
     into the binary package to provide a sensible default for the Binary class.
 
 Library
-    Build-Depends: base < 4.6,
+    Build-Depends: base < 4.7,
                    binary < 0.7,
-                   ghc-prim < 0.3
+                   ghc-prim < 0.4
     Ghc-Prof-Options: -prof -auto-all -caf-all -rtsopts
     Exposed-Modules: Data.Binary.Derive
     Exposed: True
